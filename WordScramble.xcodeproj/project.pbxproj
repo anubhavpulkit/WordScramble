@@ -13,6 +13,7 @@
 		E6E4516425D3E0F50046E494 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6E4516325D3E0F50046E494 /* Assets.xcassets */; };
 		E6E4516725D3E0F50046E494 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6E4516625D3E0F50046E494 /* Preview Assets.xcassets */; };
 		E6E4516A25D3E0F50046E494 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6E4516825D3E0F50046E494 /* LaunchScreen.storyboard */; };
+		E6E4517225D3FCF40046E494 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = E6E4517125D3FCF40046E494 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E6E4516625D3E0F50046E494 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E6E4516925D3E0F50046E494 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6E4516B25D3E0F50046E494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6E4517125D3FCF40046E494 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				E6E4516125D3E0F30046E494 /* ContentView.swift */,
 				E6E4516325D3E0F50046E494 /* Assets.xcassets */,
 				E6E4516825D3E0F50046E494 /* LaunchScreen.storyboard */,
+				E6E4517125D3FCF40046E494 /* start.txt */,
 				E6E4516B25D3E0F50046E494 /* Info.plist */,
 				E6E4516525D3E0F50046E494 /* Preview Content */,
 			);
@@ -134,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6E4516A25D3E0F50046E494 /* LaunchScreen.storyboard in Resources */,
+				E6E4517225D3FCF40046E494 /* start.txt in Resources */,
 				E6E4516725D3E0F50046E494 /* Preview Assets.xcassets in Resources */,
 				E6E4516425D3E0F50046E494 /* Assets.xcassets in Resources */,
 			);
