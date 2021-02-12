@@ -16,6 +16,9 @@ struct ContentView: View {
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showingError = false
+    
+    @State private var score = 0
+    @State private var inst = 0
 
     var body: some View {
 
@@ -34,7 +37,23 @@ struct ContentView: View {
                     Image(systemName: "\($0.count).circle")
                     Text($0)
                 }
-            }.navigationBarTitle(rootWord)
+                
+                Text("Score is: \(score)")
+                    .padding()
+                    .frame(width: 150, height: 100, alignment: .center)
+            }
+            .navigationBarItems(trailing: Button(action:{
+                self.startGame()
+                self.scoreFinal()
+            }){
+                Text("New Word")
+                    .bold()
+                    .foregroundColor(.white)
+                    .frame(width: 100, height: 30, alignment: .center)
+                    .background(LinearGradient(gradient: Gradient(colors: [.blue, .orange]), startPoint: .leading, endPoint: .trailing))
+                    .cornerRadius(20)
+            })
+            .navigationBarTitle(rootWord)
             .onAppear(perform: startGame)
             .alert(isPresented: $showingError){
                 Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
@@ -42,6 +61,19 @@ struct ContentView: View {
 
         }
     }
+    
+    func scoreFinal(){
+        inst = usedWords.count
+        score = usedWords[0].count
+        
+//
+//        ForEach(0..<inst) { number in
+//            print(usedWords[number].count)
+//        }
+//
+        usedWords.removeAll()
+    }
+    
     func addNewWord(){
         
         // remove spacing and line brack and all letters are in lowercased
@@ -49,7 +81,7 @@ struct ContentView: View {
        
         // using guard prop to insure newWord have at least 1 letter.
         // exit if the remaining string is empty
-        guard answer.count > 0 else{
+        guard answer.count > 2 else{
             return
         }
         
